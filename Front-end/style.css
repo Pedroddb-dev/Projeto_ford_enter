@@ -103,3 +103,16 @@ body {
 .seguranca p{
     color: #f8fafc;
 }
+
+.banner{
+    background-image: url(Imgs/Animais_banner.webp);
+    background-size: cover;
+    width: 90%;
+    justify-items: center;
+    justify-self: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 70vh;
+    margin-top: 10px;
+    border-radius: 20px;
+}
