@@ -1,17 +1,18 @@
 :root {
-    --cor-primaria: #2563eb;       /* Variável para a cor azul padrão do projeto */
-    --cor-secundaria: #1e293b;     /* Variável para cor cinza escuro/navegação */
-    --cor-fundo: #f8fafc;          /* Variável para cor de fundo geral */
-    --cor-texto: #334155;          /* Variável para tom de texto das fontes */
-    --fonte-padrao: 'Segoe UI', Arial, sans-serif; /* Variável com a pilha de fontes do projeto */
-    --sombra-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Variável de sombra reutilizável */
+  --cor-primaria: #2563eb; /* Variável para a cor azul padrão do projeto */
+  --cor-secundaria: #1e293b; /* Variável para cor cinza escuro/navegação */
+  --cor-fundo: #f8fafc; /* Variável para cor de fundo geral */
+  --cor-texto: #334155; /* Variável para tom de texto das fontes */
+  --fonte-padrao:
+    "Segoe UI", Arial, sans-serif; /* Variável com a pilha de fontes do projeto */
+  --sombra-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Variável de sombra reutilizável */
 }
 
 /* Seletor Universal (*): Reseta o comportamento visual padrão inconsistente de todos os navegadores */
 * {
-    margin: 0;                   /* Zera as margens externas padrão de todos os elementos */
-    padding: 0;                  /* Zera os preenchimentos internos padrão */
-    box-sizing: border-box;       /* Altera o Box Model: largura e altura incluem bordas e paddings, evitando quebra de layout */
+  margin: 0; /* Zera as margens externas padrão de todos os elementos */
+  padding: 0; /* Zera os preenchimentos internos padrão */
+  box-sizing: border-box; /* Altera o Box Model: largura e altura incluem bordas e paddings, evitando quebra de layout */
 }
 
 /* ==========================================================================
@@ -19,100 +20,151 @@
    ========================================================================== */
 
 body {
-    font-family: var(--fonte-padrao); /* Aplica a variável da pilha de fontes */
-    background-color: var(--cor-fundo);/* Define a cor de fundo utilizando a variável */
-    color: var(--cor-texto);          /* Define a cor base do texto */
-    line-height: 1.6;                 /* Aumenta a altura da linha para melhorar a legibilidade de parágrafos */
-    
-    /* Configuração Flexbox para manter o rodapé sempre no final da tela */
-    display: flex;
-    flex-direction: column;           /* Empilha Header, Main e Footer em coluna vertical */
-    min-height: 100vh;                /* Garante que o body tenha no mínimo 100% da altura da janela visível (Viewport Height) */
+  font-family: var(--fonte-padrao); /* Aplica a variável da pilha de fontes */
+  background-color: var(
+    --cor-fundo
+  ); /* Define a cor de fundo utilizando a variável */
+  color: var(--cor-texto); /* Define a cor base do texto */
+  line-height: 1.6; /* Aumenta a altura da linha para melhorar a legibilidade de parágrafos */
+
+  /* Configuração Flexbox para manter o rodapé sempre no final da tela */
+  display: flex;
+  flex-direction: column; /* Empilha Header, Main e Footer em coluna vertical */
+  min-height: 100vh; /* Garante que o body tenha no mínimo 100% da altura da janela visível (Viewport Height) */
 }
 
 .header-principal {
-    height: 100px;
-    display: flex;
-    background-color: var(--cor-primaria);
-    align-content: space-between;
-    align-items: center;
+  height: 100px;
+  display: flex;
+  background-color: var(--cor-primaria);
+  align-content: space-between;
+  align-items: center;
+  gap: 200px;
+}
+.header-principal h1 {
+  color: var(--cor-fundo);
+  margin-left: 20px;
+}
+.header-principal nav {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
 }
 .pesquisa {
-    height: 30px;
-    width: 400px;
-    background-color: var(--cor-fundo);
-    justify-self: flex-end;
-
+  height: 30px;
+  width: 400px;
+  background-color: var(--cor-fundo);
+  justify-self: flex-end;
 }
 .sub-menu {
-    display: flex;
-    justify-content: space-around;
-    gap: 15px;
-    background-color: var(--cor-primaria);
-    height: 55px;
-    margin-top: 20px;
-    align-items: center;
-    border-radius: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+  background-color: var(--cor-primaria);
+  height: 55px;
+  margin-top: 20px;
+  align-items: center;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .sub-menu div {
-    display: flex;
-    background-color: var(--cor-secundaria);
-    height: 35px;
-    width: 130px;
-    justify-content: center;
-    margin-top: 20px;
-    padding: 0px;
-    margin-bottom: 22.5px;
-    border-radius: 10px;
+  display: flex;
+  background-color: var(--cor-secundaria);
+  height: 35px;
+  width: 130px;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 0px;
+  margin-bottom: 22.5px;
+  border-radius: 10px;
 }
 
 .anuncio {
-    display: flex;
-    flex-flow: row nowrap;
-    background-color: var(--cor-secundaria);
-    margin-top: 2%;
-    justify-content: center;
-    justify-items: center;
-    margin-left: 350px;
-    margin-right: 350px;
-
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: var(--cor-secundaria);
+  margin-top: 2%;
+  justify-content: center;
+  justify-items: center;
+  margin-left: 350px;
+  margin-right: 350px;
 }
 
-.anuncio p{
-    color: #f8fafc;
+.anuncio p {
+  color: #f8fafc;
 }
 
-.header-principal_compras{
-    height: 100px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--cor-primaria);
+.header-principal_compras {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--cor-primaria);
 }
 
-.seguranca{
-    margin-right: 100px;
-    background-color: #334155;
+.seguranca {
+  margin-right: 100px;
+  background-color: #334155;
 }
 
-.seguranca p{
-    color: #f8fafc;
+.seguranca p {
+  color: #f8fafc;
 }
 
-.banner{
-    background-image: url(Imgs/Animais_banner.webp);
-    background-size: cover;
-    width: 90%;
-    justify-items: center;
-    justify-self: center;
-    margin-left: 5%;
-    margin-right: 5%;
-    height: 70vh;
-    margin-top: 10px;
-    border-radius: 20px;
+.banner {
+  background-image: url(Imgs/Animais_banner.webp);
+  background-size: cover;
+  width: 90%;
+  justify-items: center;
+  justify-self: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 70vh;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+.produtos {
+  display: grid;
+  align-self: end;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+  margin-top: 250px;
+  width: 100%;
+}
+
+.botao_compra {
+  align-self: flex-end;
+}
+#botao1 {
+  background-image: url(Imgs/WhatsApp\ Image\ 2026-10-01\ at\ 9.45.39\ PM.jpeg);
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  align-items: end;
+}
+
+.anuncios_lista {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 20px;
+  margin-top: 20px;
+  margin: 20px;
+}
+.anuncios_lista li {
+  list-style: none;
+  text-align: center;
+  background-color: var(--cor-primaria);
+  height: 50px;
+  width: 100%;
+  border-radius: 20px;
+  align-content: center;
 }
