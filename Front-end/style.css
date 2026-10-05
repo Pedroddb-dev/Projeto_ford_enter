@@ -95,8 +95,26 @@ body {
   padding: 0px;
   margin-bottom: 22.5px;
   border-radius: 10px;
+  text-decoration: none;
 }
-
+.sub-menu div:hover {
+  background-color: var(--cor-primaria);
+  transition: 0.5s;
+}
+.sub-menu div a {
+  align-self: center;
+}
+.sub-menu div a,
+.sub-menu div a:link,
+.sub-menu div a:visited,
+.sub-menu div a:hover,
+.sub-menu div a:active,
+.sub-menu div a:focus {
+  color: var(--cor-fundo);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+}
 .anuncio {
   display: flex;
   flex-flow: row nowrap;
@@ -130,7 +148,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 100px;
+  margin-left: auto;
+  margin-right: 80px;
   background-color: #334155;
   width: 200px;
   height: 50px;
@@ -142,8 +161,8 @@ body {
 }
 
 .banner {
-  background-image: url(Imgs/Gemini_Generated_Image_vba8ldvba8ldvba8.jpg);
-  background-position: 5% 25%;
+  background-image: url(Imgs/Banner\ principal.jpeg);
+  background-position: center;
   background-size: cover;
   width: 90%;
   justify-items: center;
@@ -157,12 +176,13 @@ body {
 
 .produtos {
   display: grid;
-  align-self: end;
+  align-self: center;
+  justify-self: center;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
   gap: 20px;
-  margin-top: 250px;
-  width: 100%;
+  margin: 20px;
+  width: calc(100% - 40px);
 }
 
 .botao_compra {
@@ -174,17 +194,48 @@ body {
   margin-bottom: auto;
   background-color: var(--cor-primaria);
   border-radius: 20px;
-  height: 200px;
+  height: 300px;
   width: 100%;
 }
 #produto1 {
-  background-image: url(Imgs/WhatsApp\ Image\ 2026-10-01\ at\ 9.45.39\ PM.jpeg);
+  background-image: url(Imgs/Racoes\ caes.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   align-items: end;
 }
 
+#produto3 {
+  background-image: url(Imgs/Racoes\ passaro.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: end;
+}
+
+#produto4 {
+  background-image: url(Imgs/Brinquedo.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: end;
+}
+
+#produto5 {
+  background-image: url(Imgs/Casa\ madeira.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: end;
+}
+
+#produto6 {
+  background-image: url(Imgs/Brinquedo\ passaro.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: end;
+}
 .anuncios_lista {
   display: flex;
   flex-direction: row;
@@ -234,7 +285,7 @@ footer {
 }
 
 #produto2 {
-  background-image: url(Imgs/WhatsApp\ Image\ 2026-10-02\ at\ 6.54.21\ PM.jpeg);
+  background-image: url(Imgs/Areia\ gatos.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -271,7 +322,7 @@ footer {
   color: var(--cor-texto);
 }
 
-.produto {
+.produtos {
   min-height: 90px;
   padding: 12px;
   background-color: #f1f1f1;
