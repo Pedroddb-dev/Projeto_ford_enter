@@ -1,9 +1,9 @@
 :root {
-  --cor-primaria: #d9531e; /* Variável para a cor azul padrão do projeto */
-  --cor-secundaria: #e65100; /* Variável para cor cinza escuro/navegação */
-  --cor-fundo: #f8f9fa; /* Variável para cor de fundo geral */
-  --cor-texto: #888888; /* Variável para tom de texto das fontes */
-  --fonte-padrao: "Segoe UI" , Arial, sans-serif ;
+  --cor-primaria: #2563eb; /* Variável para a cor azul padrão do projeto */
+  --cor-secundaria: #1e293b; /* Variável para cor cinza escuro/navegação */
+  --cor-fundo: #f8fafc; /* Variável para cor de fundo geral */
+  --cor-texto: #334155; /* Variável para tom de texto das fontes */
+  --fonte-padrao:
     "Segoe UI", Arial, sans-serif; /* Variável com a pilha de fontes do projeto */
   --sombra-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Variável de sombra reutilizável */
 }
@@ -21,10 +21,10 @@
 
 body {
   font-family: var(--fonte-padrao); /* Aplica a variável da pilha de fontes */
-  background-color: #d1d1d1
+  background-color: var(
     --cor-fundo
   ); /* Define a cor de fundo utilizando a variável */
-  color: #1000000; /* Define a cor base do texto */
+  color: var(--cor-texto); /* Define a cor base do texto */
   line-height: 1.6; /* Aumenta a altura da linha para melhorar a legibilidade de parágrafos */
 
   /* Configuração Flexbox para manter o rodapé sempre no final da tela */
@@ -63,7 +63,7 @@ body {
 .pesquisa {
   height: 30px;
   width: 400px;
-  background-color: #f0f0f0;
+  background-color: var(--cor-fundo);
 }
 .campo_pesquisa {
   width: 100%;
@@ -100,7 +100,7 @@ body {
 .anuncio {
   display: flex;
   flex-flow: row nowrap;
-  background-color:#a33900; 
+  background-color: var(--cor-secundaria);
   margin-top: 20px;
   justify-content: center;
   justify-items: center;
@@ -131,7 +131,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-right: 100px;
-  background-color: #e65100;
+  background-color: #334155;
   width: 200px;
   height: 50px;
   border-radius: 5px;
@@ -340,10 +340,10 @@ footer {
   margin-left: 40px;
   margin-top: 40px;
 }
-
-@media (max-width: 640px) {
+ /* celulares */
+@media (max-width: 700px) {
   .grid-compras {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: repeat(2, 2px);
   }
 
   .secao,
@@ -355,3 +355,38 @@ footer {
     grid-template-rows: auto auto minmax(180px, 1fr);
   }
 }
+ /* tablet */
+@media (min-width: 600px ) and (max-width: 1024px) {
+  .grid-compras {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .secao,
+  .aside {
+    min-height: 340px;
+  }
+
+  .aside {
+    grid-template-rows: auto auto minmax(180px, 1fr);
+  }
+}
+/* celulares produtos */
+@media (max-width: 700px) {
+  
+  .grid-compras{
+     grid-template-columns: repeat(2, 2fr);
+     .header-principal_compras{
+      gap: 10px;
+     }
+
+  }
+  /* table produtos */
+  @media   (max-width: 1024px){
+  .header-principal_compras{
+    gap: 10px;
+  }
+}
+
+
+}
+
